@@ -2,6 +2,8 @@ package net.juhonkoti.scantopaperless;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -58,6 +60,17 @@ public class MainActivity extends AppCompatActivity {
         etToken = findViewById(R.id.etToken);
         btnScan = findViewById(R.id.btnScan);
         textDebug = findViewById(R.id.textDebug);
+
+        try {
+            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            String version = pInfo.versionName;
+
+            // Example: set it in a TextView
+            TextView textAppVersion = findViewById(R.id.textAppVersion);
+            textAppVersion.setText("ScanToPaperless version: " + version);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String savedUrl = prefs.getString(KEY_URL, "https://");

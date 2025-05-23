@@ -49,4 +49,10 @@
         android:layout_height="267dp"
         android:text="Welcome! Press button to start scanning" />
 
+    <TextView
+        android:id="@+id/textAppVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
 </LinearLayout>
