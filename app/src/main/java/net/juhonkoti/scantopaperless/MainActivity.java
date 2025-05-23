@@ -65,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         String savedToken = prefs.getString(KEY_TOKEN, "");
         etToken.setText(savedToken);
 
+        if (savedUrl.equals("https://") || savedToken.equals("") || true) {
+            textDebug.setText("Welcome!\nSet your paperless-ngx hostname to the url field. Example value: \"https://paperless.foobar.com\".\n\n" +
+                    "Also create an API token from the Paperless user menu from top-right in the \"Edit Profile\" dialog and set it to the token field.\"");
+        }
+
         TextWatcher watcher = new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {

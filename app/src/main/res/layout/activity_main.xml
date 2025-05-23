@@ -22,21 +22,20 @@
         android:layout_height="70dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:text="https://" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bearer auth token" />
+        android:text="API Auth Token" />
 
     <EditText
         android:id="@+id/etToken"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnScan"
@@ -48,6 +47,6 @@
         android:id="@+id/textDebug"
         android:layout_width="match_parent"
         android:layout_height="267dp"
-        android:text="TextView" />
+        android:text="Welcome! Press button to start scanning" />
 
 </LinearLayout>
