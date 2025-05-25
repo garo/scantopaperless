@@ -5,6 +5,11 @@ This app uses Android native document scanning feature to scan PDF documents usi
 
 The app doesn't require any permissions as it uses the Android [native document scanner](https://android-developers.googleblog.com/2024/02/ml-kit-document-scanner-api.html).
 
+Download and installation
+=========================
+
+Currently the app is only available as a downloadable .apk file from the [release page](https://github.com/garo/scantopaperless/releases)
+
 Usage instructions
 ==================
 
